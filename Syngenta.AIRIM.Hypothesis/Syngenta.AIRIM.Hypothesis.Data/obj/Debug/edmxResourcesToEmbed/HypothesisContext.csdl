@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="HypothesisEntities" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="APR_PROJECT_HYPOTHESIS_K_GET_PROJECT_CODES_P" ReturnType="Collection(Model.PROJECT_CODES_Result)" />
+    <FunctionImport Name="APR_PROJECT_HYPOTHESIS_K_GET_PROJECT_DETAILS_P" ReturnType="Collection(Model.APR_PROJECT_HYPOTHESIS_K_GET_PROJECT_DETAILS_P_Result)">
+      <Parameter Name="CODE" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="PROJECT_CODES_Result">
+    <Property Type="String" Name="PROJECT_CODE" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="APR_PROJECT_HYPOTHESIS_K_GET_PROJECT_DETAILS_P_Result">
+    <Property Type="String" Name="PROJECT_NAME" Nullable="true" />
+    <Property Type="String" Name="PROJECT_STATUS" Nullable="false" />
+    <Property Type="String" Name="INITIATING_PROJECTCODE" Nullable="true" />
+    <Property Type="String" Name="PROJECT_TYPE_LABEL" Nullable="false" />
+    <Property Type="String" Name="PROJECT_INDICATIONS_CODE" Nullable="true" />
+  </ComplexType>
+</Schema>

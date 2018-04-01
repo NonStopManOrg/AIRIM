@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="HypothesisEntities">
+    <FunctionImportMapping FunctionImportName="APR_PROJECT_HYPOTHESIS_K_GET_PROJECT_CODES_P" FunctionName="Model.Store.APR_PROJECT_HYPOTHESIS_K_GET_PROJECT_CODES_P">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Model.PROJECT_CODES_Result">
+          <ScalarProperty Name="PROJECT_CODE" ColumnName="PROJECT_CODE" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="APR_PROJECT_HYPOTHESIS_K_GET_PROJECT_DETAILS_P" FunctionName="Model.Store.APR_PROJECT_HYPOTHESIS_K_GET_PROJECT_DETAILS_P">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Model.APR_PROJECT_HYPOTHESIS_K_GET_PROJECT_DETAILS_P_Result">
+          <ScalarProperty Name="PROJECT_NAME" ColumnName="PROJECT_NAME" />
+          <ScalarProperty Name="PROJECT_STATUS" ColumnName="PROJECT_STATUS" />
+          <ScalarProperty Name="INITIATING_PROJECTCODE" ColumnName="INITIATING_PROJECTCODE" />
+          <ScalarProperty Name="PROJECT_TYPE_LABEL" ColumnName="PROJECT_TYPE_LABEL" />
+          <ScalarProperty Name="PROJECT_INDICATIONS_CODE" ColumnName="PROJECT_INDICATIONS_CODE" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

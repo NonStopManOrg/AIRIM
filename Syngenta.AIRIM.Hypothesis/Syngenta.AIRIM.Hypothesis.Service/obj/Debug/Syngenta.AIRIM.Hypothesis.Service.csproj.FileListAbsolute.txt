@@ -1,0 +1,14 @@
+c:\users\mohammed.thabet\documents\visual studio 2017\Projects\Syngenta.AIRIM.Hypothesis\Syngenta.AIRIM.Hypothesis.Service\bin\Syngenta.AIRIM.Hypothesis.Service.dll.config
+c:\users\mohammed.thabet\documents\visual studio 2017\Projects\Syngenta.AIRIM.Hypothesis\Syngenta.AIRIM.Hypothesis.Service\bin\Syngenta.AIRIM.Hypothesis.Service.dll
+c:\users\mohammed.thabet\documents\visual studio 2017\Projects\Syngenta.AIRIM.Hypothesis\Syngenta.AIRIM.Hypothesis.Service\bin\Syngenta.AIRIM.Hypothesis.Service.pdb
+c:\users\mohammed.thabet\documents\visual studio 2017\Projects\Syngenta.AIRIM.Hypothesis\Syngenta.AIRIM.Hypothesis.Service\obj\Debug\Syngenta.AIRIM.Hypothesis.Service.csprojResolveAssemblyReference.cache
+c:\users\mohammed.thabet\documents\visual studio 2017\Projects\Syngenta.AIRIM.Hypothesis\Syngenta.AIRIM.Hypothesis.Service\obj\Debug\Syngenta.AIRIM.Hypothesis.Service.dll
+c:\users\mohammed.thabet\documents\visual studio 2017\Projects\Syngenta.AIRIM.Hypothesis\Syngenta.AIRIM.Hypothesis.Service\obj\Debug\Syngenta.AIRIM.Hypothesis.Service.pdb
+C:\Users\mohammed.thabet\Documents\Visual Studio 2017\Projects\Syngenta.AIRIM.Hypothesis\Syngenta.AIRIM.Hypothesis.Service\bin\EntityFramework.dll
+C:\Users\mohammed.thabet\Documents\Visual Studio 2017\Projects\Syngenta.AIRIM.Hypothesis\Syngenta.AIRIM.Hypothesis.Service\bin\EntityFramework.SqlServer.dll
+C:\Users\mohammed.thabet\Documents\Visual Studio 2017\Projects\Syngenta.AIRIM.Hypothesis\Syngenta.AIRIM.Hypothesis.Service\bin\Syngenta.AIRIM.Hypothesis.Data.dll
+C:\Users\mohammed.thabet\Documents\Visual Studio 2017\Projects\Syngenta.AIRIM.Hypothesis\Syngenta.AIRIM.Hypothesis.Service\bin\Syngenta.AIRIM.Hypothesis.Data.pdb
+C:\Users\mohammed.thabet\Documents\Visual Studio 2017\Projects\Syngenta.AIRIM.Hypothesis\Syngenta.AIRIM.Hypothesis.Service\bin\EntityFramework.xml
+C:\Users\mohammed.thabet\Documents\Visual Studio 2017\Projects\Syngenta.AIRIM.Hypothesis\Syngenta.AIRIM.Hypothesis.Service\bin\EntityFramework.SqlServer.xml
+C:\Users\mohammed.thabet\Documents\Visual Studio 2017\Projects\Syngenta.AIRIM.Hypothesis\Syngenta.AIRIM.Hypothesis.Service\bin\Oracle.ManagedDataAccess.dll
+C:\Users\mohammed.thabet\Documents\Visual Studio 2017\Projects\Syngenta.AIRIM.Hypothesis\Syngenta.AIRIM.Hypothesis.Service\bin\Oracle.ManagedDataAccess.EntityFramework.dll

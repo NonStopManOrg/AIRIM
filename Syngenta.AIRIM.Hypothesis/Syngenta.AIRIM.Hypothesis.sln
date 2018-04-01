@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Syngenta.AIRIM.Hypothesis.Service", "Syngenta.AIRIM.Hypothesis.Service\Syngenta.AIRIM.Hypothesis.Service.csproj", "{72A63390-0D19-4397-8A27-44416BE77EC3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Syngenta.AIRIM.Hypothesis.Data", "Syngenta.AIRIM.Hypothesis.Data\Syngenta.AIRIM.Hypothesis.Data.csproj", "{51094074-C06E-4C00-858E-AC85115F28B9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{72A63390-0D19-4397-8A27-44416BE77EC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72A63390-0D19-4397-8A27-44416BE77EC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72A63390-0D19-4397-8A27-44416BE77EC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72A63390-0D19-4397-8A27-44416BE77EC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51094074-C06E-4C00-858E-AC85115F28B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51094074-C06E-4C00-858E-AC85115F28B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51094074-C06E-4C00-858E-AC85115F28B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51094074-C06E-4C00-858E-AC85115F28B9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C44A82C1-6958-4E6F-8A66-16562589D99B}
+	EndGlobalSection
+EndGlobal

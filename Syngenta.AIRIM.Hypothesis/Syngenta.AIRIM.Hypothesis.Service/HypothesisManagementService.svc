@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="Syngenta.AIRIM.Hypothesis.Service.HypothesisManagementService" CodeBehind="HypothesisManagementService.svc.cs" %>
