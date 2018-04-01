@@ -4,5 +4,8 @@
   <Function Name="APR_PROJECT_HYPOTHESIS_K_GET_PROJECT_DETAILS_P" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="SCO_APR" StoreFunctionName="APR_PROJECT_HYPOTHESIS_K.GET_PROJECT_DETAILS_P">
     <Parameter Name="CODE" Type="varchar2" Mode="In" />
   </Function>
+  <Function Name="APR_PROJECT_HYPOTHESIS_K_GET_PROJECT_SUBSTANCECNS_P" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="SCO_APR" StoreFunctionName="APR_PROJECT_HYPOTHESIS_K.GET_PROJECT_SUBSTANCECNS_P">
+    <Parameter Name="CODE" Type="varchar2" Mode="In" />
+  </Function>
   <EntityContainer Name="ModelStoreContainer" />
 </Schema>

@@ -12,3 +12,18 @@ C:\Users\mohammed.thabet\Documents\Visual Studio 2017\Projects\Syngenta.AIRIM.Hy
 C:\Users\mohammed.thabet\Documents\Visual Studio 2017\Projects\Syngenta.AIRIM.Hypothesis\Syngenta.AIRIM.Hypothesis.Service\bin\EntityFramework.SqlServer.xml
 C:\Users\mohammed.thabet\Documents\Visual Studio 2017\Projects\Syngenta.AIRIM.Hypothesis\Syngenta.AIRIM.Hypothesis.Service\bin\Oracle.ManagedDataAccess.dll
 C:\Users\mohammed.thabet\Documents\Visual Studio 2017\Projects\Syngenta.AIRIM.Hypothesis\Syngenta.AIRIM.Hypothesis.Service\bin\Oracle.ManagedDataAccess.EntityFramework.dll
+C:\Users\moham\Documents\GitHub\AIRIM\Syngenta.AIRIM.Hypothesis\Syngenta.AIRIM.Hypothesis.Service\bin\Syngenta.AIRIM.Hypothesis.Service.dll.config
+C:\Users\moham\Documents\GitHub\AIRIM\Syngenta.AIRIM.Hypothesis\Syngenta.AIRIM.Hypothesis.Service\bin\Syngenta.AIRIM.Hypothesis.Service.dll
+C:\Users\moham\Documents\GitHub\AIRIM\Syngenta.AIRIM.Hypothesis\Syngenta.AIRIM.Hypothesis.Service\bin\Syngenta.AIRIM.Hypothesis.Service.pdb
+C:\Users\moham\Documents\GitHub\AIRIM\Syngenta.AIRIM.Hypothesis\Syngenta.AIRIM.Hypothesis.Service\bin\EntityFramework.dll
+C:\Users\moham\Documents\GitHub\AIRIM\Syngenta.AIRIM.Hypothesis\Syngenta.AIRIM.Hypothesis.Service\bin\EntityFramework.SqlServer.dll
+C:\Users\moham\Documents\GitHub\AIRIM\Syngenta.AIRIM.Hypothesis\Syngenta.AIRIM.Hypothesis.Service\bin\Oracle.ManagedDataAccess.dll
+C:\Users\moham\Documents\GitHub\AIRIM\Syngenta.AIRIM.Hypothesis\Syngenta.AIRIM.Hypothesis.Service\bin\Oracle.ManagedDataAccess.EntityFramework.dll
+C:\Users\moham\Documents\GitHub\AIRIM\Syngenta.AIRIM.Hypothesis\Syngenta.AIRIM.Hypothesis.Service\bin\Syngenta.AIRIM.Hypothesis.Data.dll
+C:\Users\moham\Documents\GitHub\AIRIM\Syngenta.AIRIM.Hypothesis\Syngenta.AIRIM.Hypothesis.Service\bin\Syngenta.AIRIM.Hypothesis.Data.pdb
+C:\Users\moham\Documents\GitHub\AIRIM\Syngenta.AIRIM.Hypothesis\Syngenta.AIRIM.Hypothesis.Service\bin\Syngenta.AIRIM.Hypothesis.Data.dll.config
+C:\Users\moham\Documents\GitHub\AIRIM\Syngenta.AIRIM.Hypothesis\Syngenta.AIRIM.Hypothesis.Service\bin\EntityFramework.xml
+C:\Users\moham\Documents\GitHub\AIRIM\Syngenta.AIRIM.Hypothesis\Syngenta.AIRIM.Hypothesis.Service\bin\EntityFramework.SqlServer.xml
+C:\Users\moham\Documents\GitHub\AIRIM\Syngenta.AIRIM.Hypothesis\Syngenta.AIRIM.Hypothesis.Service\obj\Debug\Syngenta.AIRIM.Hypothesis.Service.csprojResolveAssemblyReference.cache
+C:\Users\moham\Documents\GitHub\AIRIM\Syngenta.AIRIM.Hypothesis\Syngenta.AIRIM.Hypothesis.Service\obj\Debug\Syngenta.AIRIM.Hypothesis.Service.dll
+C:\Users\moham\Documents\GitHub\AIRIM\Syngenta.AIRIM.Hypothesis\Syngenta.AIRIM.Hypothesis.Service\obj\Debug\Syngenta.AIRIM.Hypothesis.Service.pdb

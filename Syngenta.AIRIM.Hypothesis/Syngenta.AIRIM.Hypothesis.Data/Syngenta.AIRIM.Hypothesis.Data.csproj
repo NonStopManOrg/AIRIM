@@ -57,7 +57,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="APR_PROJECT_HYPOTHESIS_K_GET_PROJECT_DETAILS_P_Result.cs">
+    <Compile Include="GET_PROJECT_DETAILS_RESULT.cs">
       <DependentUpon>HypothesisContext.tt</DependentUpon>
     </Compile>
     <Compile Include="HypothesisContext.Context.cs">
@@ -76,6 +76,9 @@
       <DependentUpon>HypothesisContext.edmx</DependentUpon>
     </Compile>
     <Compile Include="PROJECT_CODES_Result.cs">
+      <DependentUpon>HypothesisContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROJECT_SUBSTANCECNS_RESULT.cs">
       <DependentUpon>HypothesisContext.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />

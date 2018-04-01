@@ -16,7 +16,7 @@ namespace Syngenta.AIRIM.Hypothesis.Service
 
         [OperationContract]
         [WebGet(UriTemplate = "/GetProjectDetails/{code}", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json)]
-        APR_PROJECT_HYPOTHESIS_K_GET_PROJECT_DETAILS_P_Result GetProjectDetails(string code);
+        GET_PROJECT_DETAILS_RESULT GetProjectDetails(string code);
 
         //[OperationContract]
         //CompositeType GetProjectDetails(string projectCode);

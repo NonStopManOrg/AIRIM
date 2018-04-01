@@ -33,13 +33,22 @@ namespace Syngenta.AIRIM.Hypothesis.Data
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<PROJECT_CODES_Result>("APR_PROJECT_HYPOTHESIS_K_GET_PROJECT_CODES_P");
         }
     
-        public virtual ObjectResult<APR_PROJECT_HYPOTHESIS_K_GET_PROJECT_DETAILS_P_Result> APR_PROJECT_HYPOTHESIS_K_GET_PROJECT_DETAILS_P(string cODE)
+        public virtual ObjectResult<GET_PROJECT_DETAILS_RESULT> APR_PROJECT_HYPOTHESIS_K_GET_PROJECT_DETAILS_P(string cODE)
         {
             var cODEParameter = cODE != null ?
                 new ObjectParameter("CODE", cODE) :
                 new ObjectParameter("CODE", typeof(string));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<APR_PROJECT_HYPOTHESIS_K_GET_PROJECT_DETAILS_P_Result>("APR_PROJECT_HYPOTHESIS_K_GET_PROJECT_DETAILS_P", cODEParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<GET_PROJECT_DETAILS_RESULT>("APR_PROJECT_HYPOTHESIS_K_GET_PROJECT_DETAILS_P", cODEParameter);
+        }
+    
+        public virtual ObjectResult<PROJECT_SUBSTANCECNS_RESULT> APR_PROJECT_HYPOTHESIS_K_GET_PROJECT_SUBSTANCECNS_P(string cODE)
+        {
+            var cODEParameter = cODE != null ?
+                new ObjectParameter("CODE", cODE) :
+                new ObjectParameter("CODE", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<PROJECT_SUBSTANCECNS_RESULT>("APR_PROJECT_HYPOTHESIS_K_GET_PROJECT_SUBSTANCECNS_P", cODEParameter);
         }
     }
 }

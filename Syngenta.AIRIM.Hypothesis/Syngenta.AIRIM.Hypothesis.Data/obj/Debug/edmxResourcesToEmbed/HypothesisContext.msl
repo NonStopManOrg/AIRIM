@@ -10,12 +10,20 @@
     </FunctionImportMapping>
     <FunctionImportMapping FunctionImportName="APR_PROJECT_HYPOTHESIS_K_GET_PROJECT_DETAILS_P" FunctionName="Model.Store.APR_PROJECT_HYPOTHESIS_K_GET_PROJECT_DETAILS_P">
       <ResultMapping>
-        <ComplexTypeMapping TypeName="Model.APR_PROJECT_HYPOTHESIS_K_GET_PROJECT_DETAILS_P_Result">
+        <ComplexTypeMapping TypeName="Model.GET_PROJECT_DETAILS_RESULT">
           <ScalarProperty Name="PROJECT_NAME" ColumnName="PROJECT_NAME" />
           <ScalarProperty Name="PROJECT_STATUS" ColumnName="PROJECT_STATUS" />
           <ScalarProperty Name="INITIATING_PROJECTCODE" ColumnName="INITIATING_PROJECTCODE" />
           <ScalarProperty Name="PROJECT_TYPE_LABEL" ColumnName="PROJECT_TYPE_LABEL" />
           <ScalarProperty Name="PROJECT_INDICATIONS_CODE" ColumnName="PROJECT_INDICATIONS_CODE" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="APR_PROJECT_HYPOTHESIS_K_GET_PROJECT_SUBSTANCECNS_P" FunctionName="Model.Store.APR_PROJECT_HYPOTHESIS_K_GET_PROJECT_SUBSTANCECNS_P">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Model.PROJECT_SUBSTANCECNS_RESULT">
+          <ScalarProperty Name="CSN" ColumnName="CSN" />
+          <ScalarProperty Name="STILL_OF_INTEREST" ColumnName="STILL_OF_INTEREST" />
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
