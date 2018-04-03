@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ProjectMembers.cs" />
     <Compile Include="ProjectSubstanceModel.cs" />
     <Compile Include="ProjectDetails.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

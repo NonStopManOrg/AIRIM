@@ -29,17 +29,17 @@ namespace Syngenta.AIRIM.Hypothesis.Service
     {
         public CreateProjectSubstanceParams(string projectcode, string substancecsn, bool stillofinterest)
         {
-            Projectcode = projectcode;
-            Substancecsn = substancecsn;
-            Stillofinterest = stillofinterest;
+            ProjectCode = projectcode;
+            SubstanceCSN = substancecsn;
+            StillOfInterest = stillofinterest;
         }
 
         [DataMember]
-        public string Projectcode { get; private set; }
+        public string ProjectCode { get; private set; }
         [DataMember]
-        public string Substancecsn { get; private set; }
+        public string SubstanceCSN { get; private set; }
         [DataMember]
-        public bool Stillofinterest { get; private set; }
+        public bool StillOfInterest { get; private set; }
     }
     [DataContract]
     public class CreateCategorySubstanceParams
@@ -75,7 +75,7 @@ namespace Syngenta.AIRIM.Hypothesis.Service
 
         [OperationContract]
         [WebGet(UriTemplate = "/GetProjectMembers/{code}", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json)]
-        ProjectDetail GetProjectMembers(string code);
+        List<ProjectMember> GetProjectMembers(string code);
 
 
         [OperationContract]

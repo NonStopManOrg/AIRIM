@@ -136,10 +136,80 @@ namespace Syngenta.AIRIM.Hypothesis.Service
             return substanceCsnList;
         }
 
+      
+
+        public List<string> GetSubstanceSamples(string code)
+        {
+            throw new NotImplementedException();
+        }
+        public List<ProjectMember> GetProjectMembers(string code)
+        {
+            var connection = new OracleConnection();
+            connection.ConnectionString = Constants.ConnectionString;
+            //List<ProjectSubstanceModel> projectSubstances = null;
+            string commText = "APR_PROJECT_HYPOTHESIS_K.Get_PROJECT_MEMBERS_p";
+            OracleCommand cmd = new OracleCommand(commText, connection)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
+
+            OracleParameter projectCategoriesOracleParameter = cmd.Parameters.Add("PROJECT_MEMBERS", OracleDbType.RefCursor, ParameterDirection.Output);
+            OracleParameter projectCodeOracleParameter = cmd.Parameters.Add("CODE", OracleDbType.Varchar2, ParameterDirection.Input); connection.Open();
+            projectCodeOracleParameter.Value = code;
+
+            cmd.ExecuteNonQuery();
+            var myReader = ((OracleRefCursor)projectCategoriesOracleParameter.Value).GetDataReader();
+            var ProjectMemberList = new List<ProjectMember>();
+            while (myReader.Read())
+            {
+                ProjectMemberList.Add(new ProjectMember() {
+                    UserName = myReader[0].ToString(),
+                    Role = myReader[1].ToString()
+                });
+            }
+            connection.Close();
+            return ProjectMemberList;
+        }
+
+       
+        public string CreateProjectCategory(CreateProjectParams createProjectParams)
+        {
+            var connection = new OracleConnection { ConnectionString = Constants.ConnectionString };
+            var commText = "APR_PROJECT_SUBS_CATEGORY_K.insert_PROJECT_SUBS_CATEGORY_p";
+            OracleCommand cmd = new OracleCommand(commText, connection)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
+
+            OracleParameter subCategoryNameOracleParameter = cmd.Parameters.Add("p_SUBS_CATEGORY_NAME", OracleDbType.Varchar2, ParameterDirection.Input);
+            subCategoryNameOracleParameter.Value = createProjectParams.Categoryname;
+            OracleParameter subCategoryIdOracleParameter = cmd.Parameters.Add("p_SUBS_CATEGORY_ID", OracleDbType.Varchar2, ParameterDirection.Input);
+            subCategoryIdOracleParameter.Value = createProjectParams.Categoryid;
+            OracleParameter projectCodeOracleParameter = cmd.Parameters.Add("p_PROJECT_CODE", OracleDbType.Varchar2, ParameterDirection.Input);
+            projectCodeOracleParameter.Value = createProjectParams.Projectcode;
+            OracleParameter resultOracleParameter = cmd.Parameters.Add("p_results", OracleDbType.RefCursor, ParameterDirection.Input);
+
+            connection.Open();
+
+            cmd.ExecuteNonQuery();
+            var myReader = ((OracleRefCursor)resultOracleParameter.Value).GetDataReader();
+            var projectCategory = "";
+            if (myReader.Read())
+            {
+                projectCategory = myReader[0].ToString();
+            }
+            connection.Close();
+            return projectCategory;
+        }
+        public string CreateProjectSubstance(CreateProjectSubstanceParams createProjectSubstanceParams)
+        {
+            //APR_PROJECT_SUBS_CATEGORY_K.insert_PROJECT_SUBS_CATEGORY_p
+            throw new NotImplementedException();
+        }
         public void CreateCategorySubstance(CreateCategorySubstanceParams createCategorySubstanceParams)
         {
             var connection = new OracleConnection { ConnectionString = Constants.ConnectionString };
-            var commText = "APR_PROJECT_HYPOTHESIS_K.insert_PROJECT_SUBS_CATEGORY_p";
+            var commText = "APR_PROJECT_SUBS_CATEGORY_K.insert_PROJECT_SUBS_CATEGORY_p";
             OracleCommand cmd = new OracleCommand(commText, connection)
             {
                 CommandType = CommandType.StoredProcedure
@@ -150,48 +220,6 @@ namespace Syngenta.AIRIM.Hypothesis.Service
             substanceIdOracleParameter.Value = createCategorySubstanceParams.Substancecsn;
             cmd.ExecuteNonQuery();
             connection.Close();
-        }
-        public string CreateProjectCategory(CreateProjectParams createProjectParams)
-        {
-            var connection = new OracleConnection { ConnectionString = Constants.ConnectionString };
-            var commText = "APR_PROJECT_HYPOTHESIS_K.insert_PROJECT_SUBS_CATEGORY_p";
-            OracleCommand cmd = new OracleCommand(commText, connection)
-            {
-                CommandType = CommandType.StoredProcedure
-            };
-
-            OracleParameter subCategoryNameOracleParameter = cmd.Parameters.Add("p_SUBS_CATEGORY_NAME", OracleDbType.Varchar2, ParameterDirection.Input);
-            subCategoryNameOracleParameter.Value = createProjectParams.Categoryname;
-            OracleParameter subCategoryIdOracleParameter = cmd.Parameters.Add("p_SUBS_CATEGORY_ID", OracleDbType.Varchar2, ParameterDirection.Input);
-            subCategoryIdOracleParameter.Value = createProjectParams.Categoryid;
-            OracleParameter projectCodeOracleParameter = cmd.Parameters.Add("p_PROJECT_CODE", OracleDbType.Varchar2, ParameterDirection.Input); connection.Open();
-            projectCodeOracleParameter.Value = createProjectParams.Projectcode;
-            OracleParameter resultOracleParameter = cmd.Parameters.Add("p_results", OracleDbType.RefCursor, ParameterDirection.Input); connection.Open();
-
-            projectCodeOracleParameter.Value = createProjectParams.Categoryid;
-
-            cmd.ExecuteNonQuery();
-            var myReader = ((OracleRefCursor)resultOracleParameter.Value).GetDataReader();
-            var projectCategory = "";   
-            if (myReader.Read())
-            {
-                projectCategory = myReader[0].ToString();
-            }
-            connection.Close();
-            return projectCategory;
-        }
-
-        public List<string> GetSubstanceSamples(string code)
-        {
-            throw new NotImplementedException();
-        }
-        public ProjectDetail GetProjectMembers(string code)
-        {
-            throw new NotImplementedException();
-        }
-        public string CreateProjectSubstance(CreateProjectSubstanceParams createProjectSubstanceParams)
-        {
-            throw new NotImplementedException();
         }
     }
 }

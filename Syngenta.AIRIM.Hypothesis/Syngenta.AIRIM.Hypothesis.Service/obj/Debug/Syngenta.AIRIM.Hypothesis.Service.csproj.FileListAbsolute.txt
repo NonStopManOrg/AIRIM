@@ -45,3 +45,5 @@ C:\Users\mohammed.thabet\Documents\GitHub\AIRIM\Syngenta.AIRIM.Hypothesis\Syngen
 C:\Users\mohammed.thabet\Documents\GitHub\AIRIM\Syngenta.AIRIM.Hypothesis\Syngenta.AIRIM.Hypothesis.Service\obj\Debug\Syngenta.AIRIM.Hypothesis.Service.pdb
 C:\Users\mohammed.thabet\Documents\GitHub\AIRIM\Syngenta.AIRIM.Hypothesis\Syngenta.AIRIM.Hypothesis.Service\bin\Syngenta.AIRIM.Hypothesis.Models.dll
 C:\Users\mohammed.thabet\Documents\GitHub\AIRIM\Syngenta.AIRIM.Hypothesis\Syngenta.AIRIM.Hypothesis.Service\bin\Syngenta.AIRIM.Hypothesis.Models.pdb
+C:\Users\moham\Documents\GitHub\AIRIM\Syngenta.AIRIM.Hypothesis\Syngenta.AIRIM.Hypothesis.Service\bin\Syngenta.AIRIM.Hypothesis.Models.dll
+C:\Users\moham\Documents\GitHub\AIRIM\Syngenta.AIRIM.Hypothesis\Syngenta.AIRIM.Hypothesis.Service\bin\Syngenta.AIRIM.Hypothesis.Models.pdb
