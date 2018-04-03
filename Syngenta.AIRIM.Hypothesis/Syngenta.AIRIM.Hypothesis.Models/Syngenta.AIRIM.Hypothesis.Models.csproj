@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CreateProjectParams.cs" />
+    <Compile Include="CreateProjectSubstanceParams.cs" />
     <Compile Include="ProjectMembers.cs" />
     <Compile Include="ProjectSubstanceModel.cs" />
     <Compile Include="ProjectDetails.cs" />
