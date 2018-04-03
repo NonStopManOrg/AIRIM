@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CreateProjectParams.cs" />
+    <Compile Include="CreateCategorySubstanceParams.cs" />
     <Compile Include="CreateProjectSubstanceParams.cs" />
     <Compile Include="ProjectMembers.cs" />
     <Compile Include="ProjectSubstanceModel.cs" />

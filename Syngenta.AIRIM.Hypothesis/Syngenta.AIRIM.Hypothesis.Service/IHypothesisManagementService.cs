@@ -8,19 +8,7 @@ using Syngenta.AIRIM.Hypothesis.Models;
 namespace Syngenta.AIRIM.Hypothesis.Service
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "IHypothesisManagementService" in both code and config file together.
-    public class CreateCategorySubstanceParams
-    {
-        public CreateCategorySubstanceParams(string categoryid, string substancecsn)
-        {
-            Categoryid = categoryid;
-            Substancecsn = substancecsn;
-        }
-
-        [DataMember]
-        public string Categoryid { get; private set; }
-        [DataMember]
-        public string Substancecsn { get; private set; }
-    }
+    
 
     [ServiceContract]
     public interface IHypothesisManagementService
