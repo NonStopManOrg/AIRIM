@@ -8,40 +8,6 @@ using Syngenta.AIRIM.Hypothesis.Models;
 namespace Syngenta.AIRIM.Hypothesis.Service
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "IHypothesisManagementService" in both code and config file together.
-    [DataContract]
-    public class CreateProjectParams
-    {
-        public CreateProjectParams(string projectcode, string categoryname, string categoryid)
-        {
-            Projectcode = projectcode;
-            Categoryname = categoryname;
-            Categoryid = categoryid;
-        }
-        [DataMember]
-        public string Projectcode { get; set; }
-        [DataMember]
-        public string Categoryname { get; set; }
-        [DataMember]
-        public string Categoryid { get; set; }
-    }
-    [DataContract]
-    public class CreateProjectSubstanceParams
-    {
-        public CreateProjectSubstanceParams(string projectcode, string substancecsn, bool stillofinterest)
-        {
-            ProjectCode = projectcode;
-            SubstanceCSN = substancecsn;
-            StillOfInterest = stillofinterest;
-        }
-
-        [DataMember]
-        public string ProjectCode { get; private set; }
-        [DataMember]
-        public string SubstanceCSN { get; private set; }
-        [DataMember]
-        public bool StillOfInterest { get; private set; }
-    }
-    [DataContract]
     public class CreateCategorySubstanceParams
     {
         public CreateCategorySubstanceParams(string categoryid, string substancecsn)
