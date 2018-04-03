@@ -57,6 +57,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Constants.cs" />
     <Compile Include="GET_PROJECT_DETAILS_RESULT.cs">
       <DependentUpon>HypothesisContext.tt</DependentUpon>
     </Compile>

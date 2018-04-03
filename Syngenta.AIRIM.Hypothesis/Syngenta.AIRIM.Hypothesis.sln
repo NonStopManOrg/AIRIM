@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Syngenta.AIRIM.Hypothesis.S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Syngenta.AIRIM.Hypothesis.Data", "Syngenta.AIRIM.Hypothesis.Data\Syngenta.AIRIM.Hypothesis.Data.csproj", "{51094074-C06E-4C00-858E-AC85115F28B9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Syngenta.AIRIM.Hypothesis.Models", "Syngenta.AIRIM.Hypothesis.Models\Syngenta.AIRIM.Hypothesis.Models.csproj", "{9A8BEFF8-73E6-4F14-9AFC-2A2FE26B164F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{51094074-C06E-4C00-858E-AC85115F28B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{51094074-C06E-4C00-858E-AC85115F28B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{51094074-C06E-4C00-858E-AC85115F28B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A8BEFF8-73E6-4F14-9AFC-2A2FE26B164F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A8BEFF8-73E6-4F14-9AFC-2A2FE26B164F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A8BEFF8-73E6-4F14-9AFC-2A2FE26B164F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A8BEFF8-73E6-4F14-9AFC-2A2FE26B164F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
