@@ -25,11 +25,9 @@ namespace Syngenta.AIRIM.Hypothesis.Service
         [WebGet(UriTemplate = "/GetProjectSubstance/{code}", RequestFormat = WebMessageFormat.Xml, ResponseFormat = WebMessageFormat.Xml)]
         List<ProjectSubstanceModel> GetProjectSubstance(string code);
 
-
         [OperationContract]
         [WebGet(UriTemplate = "/GetProjectMembers/{code}", RequestFormat = WebMessageFormat.Xml, ResponseFormat = WebMessageFormat.Xml)]
         List<ProjectMember> GetProjectMembers(string code);
-
 
         [OperationContract]
         [WebGet(UriTemplate = "/GetProjectCategories/{code}", RequestFormat = WebMessageFormat.Xml, ResponseFormat = WebMessageFormat.Xml)]

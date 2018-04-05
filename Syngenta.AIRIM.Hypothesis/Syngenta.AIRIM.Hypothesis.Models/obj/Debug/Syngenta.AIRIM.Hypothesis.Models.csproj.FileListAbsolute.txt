@@ -9,3 +9,9 @@ C:\Users\moham\Documents\GitHub\AIRIM\Syngenta.AIRIM.Hypothesis\Syngenta.AIRIM.H
 C:\Users\moham\Documents\GitHub\AIRIM\Syngenta.AIRIM.Hypothesis\Syngenta.AIRIM.Hypothesis.Models\obj\Debug\Syngenta.AIRIM.Hypothesis.Models.csprojResolveAssemblyReference.cache
 C:\Users\moham\Documents\GitHub\AIRIM\Syngenta.AIRIM.Hypothesis\Syngenta.AIRIM.Hypothesis.Models\obj\Debug\Syngenta.AIRIM.Hypothesis.Models.dll
 C:\Users\moham\Documents\GitHub\AIRIM\Syngenta.AIRIM.Hypothesis\Syngenta.AIRIM.Hypothesis.Models\obj\Debug\Syngenta.AIRIM.Hypothesis.Models.pdb
+C:\Users\mohammed.thabet\Documents\GitHub\AIRIM2\Syngenta.AIRIM.Hypothesis\Syngenta.AIRIM.Hypothesis.Models\bin\Debug\Syngenta.AIRIM.Hypothesis.Models.dll
+C:\Users\mohammed.thabet\Documents\GitHub\AIRIM2\Syngenta.AIRIM.Hypothesis\Syngenta.AIRIM.Hypothesis.Models\bin\Debug\Syngenta.AIRIM.Hypothesis.Models.pdb
+C:\Users\mohammed.thabet\Documents\GitHub\AIRIM2\Syngenta.AIRIM.Hypothesis\Syngenta.AIRIM.Hypothesis.Models\obj\Debug\Syngenta.AIRIM.Hypothesis.Models.csprojResolveAssemblyReference.cache
+C:\Users\mohammed.thabet\Documents\GitHub\AIRIM2\Syngenta.AIRIM.Hypothesis\Syngenta.AIRIM.Hypothesis.Models\obj\Debug\Syngenta.AIRIM.Hypothesis.Models.csproj.CoreCompileInputs.cache
+C:\Users\mohammed.thabet\Documents\GitHub\AIRIM2\Syngenta.AIRIM.Hypothesis\Syngenta.AIRIM.Hypothesis.Models\obj\Debug\Syngenta.AIRIM.Hypothesis.Models.dll
+C:\Users\mohammed.thabet\Documents\GitHub\AIRIM2\Syngenta.AIRIM.Hypothesis\Syngenta.AIRIM.Hypothesis.Models\obj\Debug\Syngenta.AIRIM.Hypothesis.Models.pdb

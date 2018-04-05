@@ -10,7 +10,6 @@ namespace Syngenta.AIRIM.Hypothesis.Models
             Categoryid = categoryid;
             Substancecsn = substancecsn;
         }
-
         [DataMember]
         public string Categoryid { get; private set; }
         [DataMember]

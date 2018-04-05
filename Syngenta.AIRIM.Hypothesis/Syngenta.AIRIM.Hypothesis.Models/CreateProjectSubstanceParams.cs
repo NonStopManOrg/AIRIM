@@ -11,7 +11,6 @@ namespace Syngenta.AIRIM.Hypothesis.Models
             SubstanceCSN = substancecsn;
             StillOfInterest = stillofinterest;
         }
-
         [DataMember]
         public string ProjectCode { get; private set; }
         [DataMember]
