@@ -43,10 +43,12 @@
   <ItemGroup>
     <Compile Include="CreateProjectParams.cs" />
     <Compile Include="CreateCategorySubstanceParams.cs" />
+    <Compile Include="SubstanceSample.cs" />
+    <Compile Include="UpdateProjectSubstanceParams.cs" />
     <Compile Include="CreateProjectSubstanceParams.cs" />
     <Compile Include="ProjectMembers.cs" />
     <Compile Include="ProjectSubstanceModel.cs" />
-    <Compile Include="ProjectDetails.cs" />
+    <Compile Include="ProjectDetail.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

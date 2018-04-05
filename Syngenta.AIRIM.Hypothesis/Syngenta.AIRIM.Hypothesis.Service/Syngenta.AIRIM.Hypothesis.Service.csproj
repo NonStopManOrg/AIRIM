@@ -81,6 +81,7 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Constants\Constants.cs" />
     <Compile Include="HypothesisManagementService.svc.cs">
       <DependentUpon>HypothesisManagementService.svc</DependentUpon>
     </Compile>
@@ -100,10 +101,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Syngenta.AIRIM.Hypothesis.Data\Syngenta.AIRIM.Hypothesis.Data.csproj">
-      <Project>{51094074-C06E-4C00-858E-AC85115F28B9}</Project>
-      <Name>Syngenta.AIRIM.Hypothesis.Data</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Syngenta.AIRIM.Hypothesis.Models\Syngenta.AIRIM.Hypothesis.Models.csproj">
       <Project>{9A8BEFF8-73E6-4F14-9AFC-2A2FE26B164F}</Project>
       <Name>Syngenta.AIRIM.Hypothesis.Models</Name>

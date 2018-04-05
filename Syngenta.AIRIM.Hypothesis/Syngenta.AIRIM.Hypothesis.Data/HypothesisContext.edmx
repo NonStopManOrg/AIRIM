@@ -5,6 +5,7 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="Model.Store" Provider="Oracle.ManagedDataAccess.Client" ProviderManifestToken="11.2" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <Function Name="APR_COM_HELPER_K_GET_REFDATA_USER_SID_F" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="SCO_APR" StoreFunctionName="APR_COM_HELPER_K.GET_REFDATA_USER_SID_F" ReturnType="varchar2" />
         <Function Name="APR_PROJECT_HYPOTHESIS_K_GET_PROJECT_CODES_P" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="SCO_APR" StoreFunctionName="APR_PROJECT_HYPOTHESIS_K.GET_PROJECT_CODES_P" />
         <Function Name="APR_PROJECT_HYPOTHESIS_K_GET_PROJECT_DETAILS_P" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="SCO_APR" StoreFunctionName="APR_PROJECT_HYPOTHESIS_K.GET_PROJECT_DETAILS_P">
           <Parameter Name="CODE" Type="varchar2" Mode="In" />
@@ -23,7 +24,7 @@
           <Parameter Name="CODE" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="APR_PROJECT_HYPOTHESIS_K_GET_PROJECT_SUBSTANCECNS_P" ReturnType="Collection(Model.PROJECT_SUBSTANCECNS_RESULT)">
-            <Parameter Name="CODE" Mode="In" Type="String" />
+          <Parameter Name="CODE" Mode="In" Type="String" />
           </FunctionImport>
         </EntityContainer>
         <ComplexType Name="PROJECT_CODES_Result">
