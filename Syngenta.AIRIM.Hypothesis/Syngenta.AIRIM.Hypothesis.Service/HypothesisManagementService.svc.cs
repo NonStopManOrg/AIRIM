@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Oracle.ManagedDataAccess.Client;
 using System.Data;
 using Oracle.ManagedDataAccess.Types;
@@ -12,8 +13,7 @@ namespace Syngenta.AIRIM.Hypothesis.Service
     {
         public List<string> GetProjectCodes()
         {
-            var connection = new OracleConnection();
-            connection.ConnectionString = Constants.ConnectionString;
+            var connection = new OracleConnection {ConnectionString = Constants.ConnectionString};
             List<string> projectsCodes = new List<string>();
             string commText = "APR_PROJECT_HYPOTHESIS_K.GET_PROJECT_CODES_P";
             OracleCommand cmd = new OracleCommand(commText, connection)
@@ -35,8 +35,7 @@ namespace Syngenta.AIRIM.Hypothesis.Service
         }
         public ProjectDetail GetProjectDetails(string code)
         {
-            var connection = new OracleConnection();
-            connection.ConnectionString = Constants.ConnectionString;
+            var connection = new OracleConnection {ConnectionString = Constants.ConnectionString};
             ProjectDetail projectDetails = null;
             string commText = "APR_PROJECT_HYPOTHESIS_K.Get_PROJECT_DETAILS_p";
             OracleCommand cmd = new OracleCommand(commText, connection)
@@ -65,8 +64,7 @@ namespace Syngenta.AIRIM.Hypothesis.Service
         }
         public List<ProjectSubstanceModel> GetProjectSubstance(string code)
         {
-            var connection = new OracleConnection();
-            connection.ConnectionString = Constants.ConnectionString;
+            var connection = new OracleConnection {ConnectionString = Constants.ConnectionString};
             List<ProjectSubstanceModel> projectSubstances = null;
             string commText = "APR_PROJECT_HYPOTHESIS_K.Get_PROJECT_SUBSTANCECNS_p";
             OracleCommand cmd = new OracleCommand(commText, connection)
@@ -93,8 +91,7 @@ namespace Syngenta.AIRIM.Hypothesis.Service
         }
         public List<string> GetProjectCategories(string code)
         {
-            var connection = new OracleConnection();
-            connection.ConnectionString = Constants.ConnectionString;
+            var connection = new OracleConnection {ConnectionString = Constants.ConnectionString};
             string commText = "APR_PROJECT_HYPOTHESIS_K.Get_PROJECT_CATEGORIES_p";
             OracleCommand cmd = new OracleCommand(commText, connection)
             {
@@ -110,13 +107,12 @@ namespace Syngenta.AIRIM.Hypothesis.Service
             {
                 projectCategoriesList.Add(myReader[0].ToString());
             }
-            connection.Close();
+            connection.Dispose();
             return projectCategoriesList;
         }
         public List<string> GetCategorySubstanceCSN(string categoryid)
         {
-            var connection = new OracleConnection();
-            connection.ConnectionString = Constants.ConnectionString;
+            var connection = new OracleConnection {ConnectionString = Constants.ConnectionString};
             string commText = "APR_PROJECT_HYPOTHESIS_K.Get_PROJECT_SUBSTANCECNS_CSN_p";
             OracleCommand cmd = new OracleCommand(commText, connection)
             {
@@ -132,13 +128,12 @@ namespace Syngenta.AIRIM.Hypothesis.Service
             {
                 substanceCsnList.Add(myReader[0].ToString());
             }
-            connection.Close();
+            connection.Dispose();
             return substanceCsnList;
         }
         public List<ProjectMember> GetProjectMembers(string code)
         {
-            var connection = new OracleConnection();
-            connection.ConnectionString = Constants.ConnectionString;
+            var connection = new OracleConnection {ConnectionString = Constants.ConnectionString};
             string commText = "APR_PROJECT_HYPOTHESIS_K.Get_PROJECT_MEMBERS_p";
             OracleCommand cmd = new OracleCommand(commText, connection)
             {
@@ -158,13 +153,12 @@ namespace Syngenta.AIRIM.Hypothesis.Service
                     Role = myReader[1].ToString()
                 });
             }
-            connection.Close();
+            connection.Dispose();
             return ProjectMemberList;
         }
         public List<SubstanceSample> GetSubstanceSamples(string substancecsn)
         {
-            var connection = new OracleConnection();
-            connection.ConnectionString = Constants.ConnectionString;
+            var connection = new OracleConnection {ConnectionString = Constants.ConnectionString};
             //List<ProjectSubstanceModel> projectSubstances = null;
             string commText = "APR_PROJECT_HYPOTHESIS_K.Get_SUBSTANCECN_SAMPLES_p";
             OracleCommand cmd = new OracleCommand(commText, connection)
@@ -177,17 +171,17 @@ namespace Syngenta.AIRIM.Hypothesis.Service
             cmd.ExecuteNonQuery();
             var myReader = ((OracleRefCursor)projectCategoriesOracleParameter.Value).GetDataReader();
             var substanceSamplesList = new List<SubstanceSample>();
-            double? Sub_vesselWeight = null;
-            double? Sub_vesselConcentration = null;
-            double? Sub_vesselVolume = null;
+            double? subVesselWeight = null;
+            double? subVesselConcentration = null;
+            double? subVesselVolume = null;
             while (myReader.Read())
             {
                 if (!string.IsNullOrEmpty(myReader[4].ToString()))
-                    Sub_vesselWeight = double.Parse(myReader[4].ToString());
+                    subVesselWeight = double.Parse(myReader[4].ToString());
                 if (!string.IsNullOrEmpty(myReader[5].ToString()))
-                    Sub_vesselConcentration = double.Parse(myReader[5].ToString());
+                    subVesselConcentration = double.Parse(myReader[5].ToString());
                 if (!string.IsNullOrEmpty(myReader[6].ToString()))
-                    Sub_vesselVolume = double.Parse(myReader[6].ToString());
+                    subVesselVolume = double.Parse(myReader[6].ToString());
 
                 substanceSamplesList.Add(new SubstanceSample()
                 {
@@ -195,15 +189,15 @@ namespace Syngenta.AIRIM.Hypothesis.Service
                     IVN = myReader[1].ToString(),
                     VesselStatusLabel = myReader[2].ToString(),
                     Sub_vesselNumber = myReader[3].ToString(),
-                    Sub_vesselWeight = Sub_vesselWeight,
-                    Sub_vesselConcentration = Sub_vesselConcentration,
-                    Sub_vesselVolume = Sub_vesselVolume
+                    Sub_vesselWeight = subVesselWeight,
+                    Sub_vesselConcentration = subVesselConcentration,
+                    Sub_vesselVolume = subVesselVolume
                 });
             }
-            connection.Close();
+            connection.Dispose();
             return substanceSamplesList;
         }
-        public void CreateProjectCategory(CreateProjectParams createProjectParams)
+        public string CreateProjectCategory(CreateProjectParams createProjectParams)
         {
             var connection = new OracleConnection { ConnectionString = Constants.ConnectionString };
             var commText = "APR_PROJECT_SUBS_CATEGORY_K.INSERT_PROJECT_SUBS_CATEGORY_p";
@@ -219,9 +213,13 @@ namespace Syngenta.AIRIM.Hypothesis.Service
             OracleParameter subCategoryNameOracleParameter = cmd.Parameters.Add("p_SUBS_CATEGORY_NAME", OracleDbType.Varchar2, ParameterDirection.Input);
             subCategoryNameOracleParameter.Value = createProjectParams.Categoryname;
             OracleParameter resultOracleParameter = cmd.Parameters.Add("p_results", OracleDbType.RefCursor, ParameterDirection.Input);
+            var myReader = ((OracleRefCursor)resultOracleParameter.Value).GetDataReader();
 
             connection.Open();
             cmd.ExecuteNonQuery();
+            if (!myReader.Read()) return null;
+            connection.Dispose();
+            return myReader[0].ToString();
         }
         public void CreateCategorySubstance(CreateCategorySubstanceParams createCategorySubstanceParams)
         {
@@ -235,10 +233,11 @@ namespace Syngenta.AIRIM.Hypothesis.Service
             categoryIdOracleParameter.Value = createCategorySubstanceParams.Categoryid;
             OracleParameter substanceIdOracleParameter = cmd.Parameters.Add("p_subs_id", OracleDbType.Varchar2, ParameterDirection.Input);
             substanceIdOracleParameter.Value = createCategorySubstanceParams.Substancecsn;
-            OracleParameter resultOracleParameter = cmd.Parameters.Add("p_results", OracleDbType.RefCursor, ParameterDirection.Input);
+             cmd.Parameters.Add("p_results", OracleDbType.RefCursor, ParameterDirection.Input);
 
             connection.Open();
             cmd.ExecuteNonQuery();
+            connection.Dispose();
         }
         public void CreateProjectSubstance(CreateProjectSubstanceParams createProjectSubstanceParams)
         {
@@ -250,31 +249,81 @@ namespace Syngenta.AIRIM.Hypothesis.Service
             };
             OracleParameter projectCodeOracleParameter = cmd.Parameters.Add("p_PROJECT_CODE", OracleDbType.Varchar2, ParameterDirection.Input);
             projectCodeOracleParameter.Value = createProjectSubstanceParams.ProjectCode;
-            OracleParameter substanceCSNOracleParameter = cmd.Parameters.Add("p_RD_SUBS_PC", OracleDbType.Varchar2, ParameterDirection.Input);
-            substanceCSNOracleParameter.Value = createProjectSubstanceParams.SubstanceCSN;
-            OracleParameter stillOfInterestOracleParameter = cmd.Parameters.Add("p_RD_SUBS_PC", OracleDbType.Varchar2, ParameterDirection.Input);
+            OracleParameter rdSubsOracleParameter = cmd.Parameters.Add("p_RD_SUBS_PC", OracleDbType.Varchar2, ParameterDirection.Input);
+            rdSubsOracleParameter.Value = createProjectSubstanceParams.SubstanceCsn;
+            OracleParameter stillOfInterestOracleParameter = cmd.Parameters.Add("p_STILL_OF_INTEREST", OracleDbType.Varchar2, ParameterDirection.Input);
             stillOfInterestOracleParameter.Value = createProjectSubstanceParams.StillOfInterest;
-            OracleParameter resultOracleParameter = cmd.Parameters.Add("p_results", OracleDbType.RefCursor, ParameterDirection.Input);
+            OracleParameter leadOracleParameter = cmd.Parameters.Add("p_LEAD", OracleDbType.Varchar2, ParameterDirection.Input);
+            leadOracleParameter.Value = createProjectSubstanceParams.StillOfInterest;
+            OracleParameter favouriteOracleParameter = cmd.Parameters.Add("p_FAVOURITE", OracleDbType.Varchar2, ParameterDirection.Input);
+            favouriteOracleParameter.Value = createProjectSubstanceParams.Favourite;
+            OracleParameter stdOracleParameter = cmd.Parameters.Add("p_STD", OracleDbType.Varchar2, ParameterDirection.Input);
+            stdOracleParameter.Value = createProjectSubstanceParams.STD;
+            OracleParameter rdFormulationSidOracleParameter = cmd.Parameters.Add("p_RD_FORMULATION_SID", OracleDbType.Varchar2, ParameterDirection.Input);
+            rdFormulationSidOracleParameter.Value = createProjectSubstanceParams.RdFormulationSid;
+            OracleParameter vFldCandidateOracleParameter = cmd.Parameters.Add("p_FLD_CANDIDATE", OracleDbType.Varchar2, ParameterDirection.Input);
+            vFldCandidateOracleParameter.Value = createProjectSubstanceParams.FldCandidate;
+             cmd.Parameters.Add("p_results", OracleDbType.RefCursor, ParameterDirection.Input);
             connection.Open();
             cmd.ExecuteNonQuery();
+            connection.Dispose();
         }
         public void UpdateProjectSubstance(UpdateProjectSubstanceParams updateProjectSubstanceParams)
         {
             var connection = new OracleConnection { ConnectionString = Constants.ConnectionString };
             var commText = "SCO_APR.APR_PROJECT_SUBS_K.update_PROJECT_SUBS_p";
-            OracleCommand cmd = new OracleCommand(commText, connection)
+            OracleCommand query = new OracleCommand
             {
-                CommandType = CommandType.StoredProcedure
+                Connection = connection,
+                CommandText =
+                    "SELECT CHANGE_SEQ_NUM, LEAD, FAVOURITE, STD, RD_FORMULATION_SID, FLD_CANDIDATE, CURRENT_OWNING_INSTANCE_CODE FROM APR_PROJECT_SUBS WHERE" +
+                    $" (PROJECT_CODE = '{updateProjectSubstanceParams.ProjectCode}') AND (RD_SUBS_PC = '{updateProjectSubstanceParams.RdSubsPc}')",
+                CommandType = CommandType.Text
             };
-            OracleParameter projectCodeOracleParameter = cmd.Parameters.Add("p_PROJECT_CODE", OracleDbType.Varchar2, ParameterDirection.Input);
-            projectCodeOracleParameter.Value = updateProjectSubstanceParams.ProjectCode;
-            OracleParameter substanceCSNOracleParameter = cmd.Parameters.Add("p_RD_SUBS_PC", OracleDbType.Varchar2, ParameterDirection.Input);
-            substanceCSNOracleParameter.Value = updateProjectSubstanceParams.SubstanceCSN;
-            OracleParameter stillOfInterestOracleParameter = cmd.Parameters.Add("p_RD_SUBS_PC", OracleDbType.Varchar2, ParameterDirection.Input);
-            stillOfInterestOracleParameter.Value = updateProjectSubstanceParams.StillOfInterest;
-            OracleParameter resultOracleParameter = cmd.Parameters.Add("p_results", OracleDbType.RefCursor, ParameterDirection.Input);
             connection.Open();
-            cmd.ExecuteNonQuery();
+            OracleDataReader dr = query.ExecuteReader();
+            if (dr.Read())
+            {
+                updateProjectSubstanceParams.ChangeSeqNum = dr["CHANGE_SEQ_NUM"].ToString();
+                updateProjectSubstanceParams.Lead = dr["LEAD"].ToString();
+                updateProjectSubstanceParams.Favourite = dr["FAVOURITE"].ToString();
+                updateProjectSubstanceParams.STD = dr["STD"].ToString();
+                updateProjectSubstanceParams.RdFormulationSid = dr["RD_FORMULATION_SID"].ToString();
+                updateProjectSubstanceParams.FldCandidate = dr["FLD_CANDIDATE"].ToString();
+                updateProjectSubstanceParams.CurrentOwningInstance = dr["CURRENT_OWNING_INSTANCE_CODE"].ToString();
+            }
+            else
+            {
+                connection.Dispose();
+                throw new Exception("there is no substance with this data");
+            }
+
+            using (OracleCommand cmd = new OracleCommand(commText, connection) { CommandType = CommandType.StoredProcedure })
+            {
+                OracleParameter projectCodeOracleParameter = cmd.Parameters.Add("p_PROJECT_CODE", OracleDbType.Varchar2, ParameterDirection.Input);
+                projectCodeOracleParameter.Value = updateProjectSubstanceParams.ProjectCode;
+                OracleParameter rdSubsOracleParameter = cmd.Parameters.Add("p_RD_SUBS_PC", OracleDbType.Varchar2, ParameterDirection.Input);
+                rdSubsOracleParameter.Value = updateProjectSubstanceParams.RdSubsPc;
+                OracleParameter stillOfInterestOracleParameter = cmd.Parameters.Add("p_STILL_OF_INTEREST", OracleDbType.Varchar2, ParameterDirection.Input);
+                stillOfInterestOracleParameter.Value = updateProjectSubstanceParams.StillOfInterest;
+                OracleParameter leadOracleParameter = cmd.Parameters.Add("p_LEAD", OracleDbType.Varchar2, ParameterDirection.Input);
+                leadOracleParameter.Value = updateProjectSubstanceParams.Lead;
+                OracleParameter favouriteOracleParameter = cmd.Parameters.Add("p_FAVOURITE", OracleDbType.Varchar2, ParameterDirection.Input);
+                favouriteOracleParameter.Value = updateProjectSubstanceParams.Favourite;
+                OracleParameter stdOracleParameter = cmd.Parameters.Add("p_STD", OracleDbType.Varchar2, ParameterDirection.Input);
+                stdOracleParameter.Value = updateProjectSubstanceParams.STD;
+                OracleParameter rdFormulationSidOracleParameter = cmd.Parameters.Add("p_RD_FORMULATION_SID", OracleDbType.Varchar2, ParameterDirection.Input);
+                rdFormulationSidOracleParameter.Value = updateProjectSubstanceParams.RdFormulationSid;
+                OracleParameter pChangeSeqNumOracleParameter = cmd.Parameters.Add("p_CHANGE_SEQ_NUM", OracleDbType.Varchar2, ParameterDirection.Input);
+                pChangeSeqNumOracleParameter.Value = updateProjectSubstanceParams.ChangeSeqNum;
+                OracleParameter pCurrentOwningInstanceCodeOracleParameter = cmd.Parameters.Add("p_CURRENT_OWNING_INSTANCE_CODE", OracleDbType.Varchar2, ParameterDirection.Input);
+                pCurrentOwningInstanceCodeOracleParameter.Value = updateProjectSubstanceParams.CurrentOwningInstance;
+                OracleParameter vFldCandidateOracleParameter = cmd.Parameters.Add("p_FLD_CANDIDATE", OracleDbType.Varchar2, ParameterDirection.Input);
+                vFldCandidateOracleParameter.Value = updateProjectSubstanceParams.FldCandidate;
+                cmd.Parameters.Add("p_results", OracleDbType.RefCursor, ParameterDirection.Output);
+                cmd.ExecuteNonQuery();
+                connection.Dispose();
+            }
         }
     }
 }

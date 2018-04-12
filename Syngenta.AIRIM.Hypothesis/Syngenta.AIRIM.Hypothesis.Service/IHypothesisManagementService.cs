@@ -43,7 +43,7 @@ namespace Syngenta.AIRIM.Hypothesis.Service
 
         [OperationContract]
         [WebInvoke(UriTemplate = "/CreateProjectCategory", Method = "POST", RequestFormat = WebMessageFormat.Xml, ResponseFormat = WebMessageFormat.Xml)]
-        void CreateProjectCategory(CreateProjectParams createProjectParams);
+        string CreateProjectCategory(CreateProjectParams createProjectParams);
 
         [OperationContract]
         [WebInvoke(UriTemplate = "/CreateCategorySubstance", Method = "POST", RequestFormat = WebMessageFormat.Xml, ResponseFormat = WebMessageFormat.Xml)]

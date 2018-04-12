@@ -59,3 +59,4 @@ C:\Users\mohammed.thabet\Documents\GitHub\AIRIM2\Syngenta.AIRIM.Hypothesis\Synge
 C:\Users\mohammed.thabet\Documents\GitHub\AIRIM2\Syngenta.AIRIM.Hypothesis\Syngenta.AIRIM.Hypothesis.Service\obj\Debug\Syngenta.AIRIM.Hypothesis.Service.csprojResolveAssemblyReference.cache
 C:\Users\mohammed.thabet\Documents\GitHub\AIRIM2\Syngenta.AIRIM.Hypothesis\Syngenta.AIRIM.Hypothesis.Service\obj\Debug\Syngenta.AIRIM.Hypothesis.Service.dll
 C:\Users\mohammed.thabet\Documents\GitHub\AIRIM2\Syngenta.AIRIM.Hypothesis\Syngenta.AIRIM.Hypothesis.Service\obj\Debug\Syngenta.AIRIM.Hypothesis.Service.pdb
+C:\Users\mohammed.thabet\Documents\GitHub\AIRIM2\Syngenta.AIRIM.Hypothesis\Syngenta.AIRIM.Hypothesis.Service\obj\Debug\Syngenta.AIRIM.Hypothesis.Service.csproj.CopyComplete
