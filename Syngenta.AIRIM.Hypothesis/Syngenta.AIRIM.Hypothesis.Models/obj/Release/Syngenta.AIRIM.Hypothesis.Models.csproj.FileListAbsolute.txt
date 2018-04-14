@@ -1,0 +1,4 @@
+C:\Users\moham\Documents\GitHub\AIRIM\Syngenta.AIRIM.Hypothesis\Syngenta.AIRIM.Hypothesis.Models\bin\Release\Syngenta.AIRIM.Hypothesis.Models.dll
+C:\Users\moham\Documents\GitHub\AIRIM\Syngenta.AIRIM.Hypothesis\Syngenta.AIRIM.Hypothesis.Models\bin\Release\Syngenta.AIRIM.Hypothesis.Models.pdb
+C:\Users\moham\Documents\GitHub\AIRIM\Syngenta.AIRIM.Hypothesis\Syngenta.AIRIM.Hypothesis.Models\obj\Release\Syngenta.AIRIM.Hypothesis.Models.dll
+C:\Users\moham\Documents\GitHub\AIRIM\Syngenta.AIRIM.Hypothesis\Syngenta.AIRIM.Hypothesis.Models\obj\Release\Syngenta.AIRIM.Hypothesis.Models.pdb

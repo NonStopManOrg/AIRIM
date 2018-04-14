@@ -213,13 +213,14 @@ namespace Syngenta.AIRIM.Hypothesis.Service
             OracleParameter subCategoryNameOracleParameter = cmd.Parameters.Add("p_SUBS_CATEGORY_NAME", OracleDbType.Varchar2, ParameterDirection.Input);
             subCategoryNameOracleParameter.Value = createProjectParams.Categoryname;
             OracleParameter resultOracleParameter = cmd.Parameters.Add("p_results", OracleDbType.RefCursor, ParameterDirection.Input);
-            var myReader = ((OracleRefCursor)resultOracleParameter.Value).GetDataReader();
 
             connection.Open();
             cmd.ExecuteNonQuery();
+            var myReader = ((OracleRefCursor)resultOracleParameter.Value).GetDataReader();
             if (!myReader.Read()) return null;
+            var ProjectCategoryId = myReader[0].ToString();
             connection.Dispose();
-            return myReader[0].ToString();
+            return ProjectCategoryId;
         }
         public void CreateCategorySubstance(CreateCategorySubstanceParams createCategorySubstanceParams)
         {
